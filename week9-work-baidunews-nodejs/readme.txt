@@ -1,0 +1,4 @@
+文件说明：
+本作业是用restify框架搭建的前后端分离方案
+nodejs文件夹里包含所有的后端文件，
+expressjs文件夹里包含前端文件（其中index.html为主页，control.html为后台主页（用户名密码随意）数据库文件里是sql脚本）

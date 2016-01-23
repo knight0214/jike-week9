@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>第9周作业百度新闻页面nodejs</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet/index.css">
+</head>
+
+<body>
+    <!-- con start -->
+    <div class="con">
+        <!-- header start -->
+        <header>
+            <nav class="top-nav nav-wrap">
+                <div class="top-left-nav">
+                    <div class="left-nav-logo">
+                        <a href="https://m.baidu.com/?from=1000376a">
+                        </a>
+                    </div>
+                    <div class="login">
+                        <a href="">
+                        </a>
+                    </div>
+                </div>
+                <div class="top-right-nav">
+                    <div class="right-search">
+                        <a href="">
+                        </a>
+                    </div>
+                    <div class="right-more">
+                        <a href="">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <nav class="news-nav nav-wrap">
+                <div class="divider"></div>
+                <ul>
+                    <li id="rec-news" class="news-list actived-list">
+                        <p class="nav-text">推荐</p>
+                    </li>
+                    <li id="baijia-news" class="news-list">
+                        <div class="small-divider"></div>
+                        <p class="nav-text">百家</p>
+                    </li>
+                    <li id="bendi-news" class="news-list">
+                        <div class="small-divider"></div>
+                        <p class="nav-text">本地</p>
+                    </li>
+                    <li id="pic-news" class="news-list">
+                        <div class="small-divider"></div>
+                        <p class="nav-text">图片</p>
+                    </li>
+                    <li id="pop-news" class="news-list">
+                        <div class="small-divider"></div>
+                        <p class="nav-text">娱乐</p>
+                    </li>
+                    <li id="social-news" class="news-list">
+                        <div class="small-divider"></div>
+                        <p class="nav-text">社会</p>
+                    </li>
+                    <li id="army-news" class="news-list">
+                        <p class="nav-text">军事</p>
+                    </li>
+                    <li id="tech-news" class="news-list">
+                        <div class="small-divider"></div>
+                        <p class="nav-text">科技</p>
+                    </li>
+                    <li id="net-news" class="news-list list-2">
+                        <div class="small-divider"></div>
+                        <p class="nav-text">互联网</p>
+                    </li>
+                    <li id="women-news" class="news-list">
+                        <div class="small-divider"></div>
+                        <p class="nav-text">女人</p>
+                    </li>
+                    <li id="more-news" class="news-list">
+                        <div class="small-divider"></div>
+                        <p class="nav-text">更多</p>
+                        <i class="more-icon"></i>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- end header -->
+        <!-- article start-->
+        <article>
+            <!-- rec-news-content start -->
+            <aside id="rec-news-content" class="news-content actived-news-content">
+                <div class="index-banner rec-banner">
+                    <span class="banner-btn rec-banner-left"></span>
+                    <span class="banner-btn rec-banner-right"></span>
+                    <div class="viwepager-wrap rec-viwepager">
+                        <ul class="rec-banner-ul banner-ul">
+                            <li class="rec-list banner-list">
+                                <a href="http://m.baidu.com/news?fr=mohome&ssid=1dd16b6b3030323134b92c&from=844b&uid=&pu=sz%401320_2001%2Cta%40iphone_1_8.0_3_600&bd_page_type=1#page/2/http%3A%2F%2Fnews.163.com%2Fphotoview%2F00AO0001%2F105515.html%23p%3DBAFFGQSO00AO0001/%E6%97%A5%E6%9C%AC%E9%80%AE%E6%8D%95%E9%9D%96%E5%9B%BD%E7%A5%9E%E7%A4%BE%E7%88%86%E7%82%B8%E5%AB%8C%E7%8A%AF%E7%94%BB%E9%9D%A2%E6%9B%9D%E5%85%89/%E7%BD%91%E6%98%93%E6%96%B0%E9%97%BB/1449716246000/7624693522513721638">
+                                    <img src="./img/timg1.jpg">
+                                    <h4 class="img-title">
+                                <span>日本逮捕靖国神社爆炸嫌犯画面曝光</span>	
+                                </h4>
+                                </a>
+                            </li>
+                            <li class="rec-list banner-list">
+                                <a href="http://m.baidu.com/news?fr=mohome&ssid=1dd16b6b3030323134b92c&from=844b&uid=&pu=sz%401320_2001%2Cta%40iphone_1_8.0_3_600&bd_page_type=1#page/2/http%3A%2F%2Fi.ifeng.com%2Fnews%3Faid%3D103950959/%E6%9C%9D%E9%B2%9C%E7%89%A1%E4%B8%B9%E5%B3%B0%E4%B9%90%E5%9B%A2%E6%8A%B5%E4%BA%AC%20%E7%B3%BB%E9%A6%96%E6%AC%A1%E5%87%BA%E5%9B%BD%E5%85%AC%E6%BC%94/%E6%96%B0%E5%8D%8E%E7%BD%91/1449721630000/3225589431399184893">
+                                    <img src="./img/timg2.jpg">
+                                    <h4 class="img-title">
+                                <span>朝鲜牡丹峰乐团抵京 系首次出国公演</span>	
+                                </h4>
+                                </a>
+                            </li>
+                            <li class="rec-list banner-list">
+                                <a href="http://qianbao.baidu.com/hd/cnfanxian?jhchannel=xinwen">
+                                    <img src="./img/a686c9177f3e6709de17d0143dc79f3df9dc55c1.jpg">
+                                    <h4 class="img-title">
+                                <span>用百度钱包支付，单单返现金1%起</span>	
+                                </h4>
+                                </a>
+                            </li>
+                            <li class="rec-list banner-list">
+                                <a href="http://m.baidu.com/news?fr=mohome&ssid=1dd16b6b3030323134b92c&from=844b&uid=&pu=sz%401320_2001%2Cta%40iphone_1_8.0_3_600&bd_page_type=1#page/2/http%3A%2F%2Fphoto.sina.cn%2Falbum_1_2841_92588.htm%3Fch%3D1%26fromsinago%3D1%26page_start%3D1%26page_end%3D100/%E5%A4%A9%E5%AE%89%E9%97%A8%E5%B9%BF%E5%9C%BA%E6%AD%A6%E8%AD%A6%E9%A6%96%E6%88%B4%E5%8F%A3%E7%BD%A9%E6%89%A7%E5%8B%A4/CFP/1449696267000/3464091372849363861">
+                                    <img src="./img/timg3.jpg">
+                                    <h4 class="img-title">
+                                <span>天安门广场武警首戴口罩执勤</span>	
+                                </h4>
+                                </a>
+                            </li>
+                            <li class="rec-list banner-list">
+                                <a href="http://www.chinanews.com/m/cj/2015/12-08/7661306.shtml">
+                                    <img src="./img/f11f3a292df5e0fe127aba335b6034a85edf72a5.jpg">
+                                    <h4 class="img-title">
+                                <span>扎克伯格库克李彦宏获全球科技企业领袖前三</span>	
+                                </h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rec-pagination banner-pagin">
+                        <span class="rec-pagination-switch actived-switch"></span>
+                        <span class="rec-pagination-switch"></span>
+                        <span class="rec-pagination-switch"></span>
+                        <span class="rec-pagination-switch"></span>
+                        <span class="rec-pagination-switch"></span>
+                    </div>
+                </div>
+                <div class="hot-point">
+                    <span class="hot-icon">热点</span>
+                    <ul class="ui-hotword-content">
+                        <li class="ui-hotword-item" data-name="卡扎菲之子遭绑架">
+                            <span>卡扎菲之子遭绑架</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                        <li class="ui-hotword-item" data-name="上调最低工资标准">
+                            <span>上调最低工资标准</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                        <li class="ui-hotword-item" data-name="12306回应验证码">
+                            <span>12306回应验证码</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                        <li class="ui-hotword-item" data-name="中国老龄人口">
+                            <span>中国老龄人口</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                        <li class="ui-hotword-item" data-name="乌克兰总理作报告">
+                            <span>乌克兰总理作报告</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                        <li class="ui-hotword-item" data-name="习近平 经济观">
+                            <span>习近平 经济观</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                        <li class="ui-hotword-item" data-name="扎堆生“猴宝”">
+                            <span>扎堆生“猴宝”</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                        <li class="ui-hotword-item" data-name="屠呦呦领取诺贝尔奖">
+                            <span>屠呦呦领取诺贝尔奖</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                        <li class="ui-hotword-item" data-name="东北多地GDP造假">
+                            <span>东北多地GDP造假</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                        <li class="ui-hotword-item" data-name="天津65层高楼">
+                            <span>天津65层高楼</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                        <li class="ui-hotword-item" data-name="卡扎菲之子遭绑架">
+                            <span>卡扎菲之子遭绑架</span>
+                            <b class="ui-hotword-item-right"></b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="news-card-con">
+                    <ul class="rec-ul">
+                       
+                       
+                    </ul>
+                </div>
+                <p class="no-more no-rec">已经没有更多内容了</p>
+                <div class="get-more">
+                    <div class="get-more-btn more-rec">点击加载更多</div>
+                </div>
+            </aside>
+            <!--end rec-new-content -->
+            <!-- baijia-news-content start -->
+            <aside id="baijia-news-content" class="news-content">
+               <div class="news-card-con">
+                    <ul class="baijia-ul">
+                       
+                    </ul>
+                </div>
+                <p class="no-more no-baijia">已经没有更多内容了</p>
+                <div class="get-more">
+                    <div class="get-more-btn more-baijia">点击加载更多</div>
+                </div>
+            </aside>
+            <!-- end baijia-news-content -->
+            <!-- beidi-news-cotent -->
+            <aside id="bendi-news-content" class="news-content">
+                <div class="index-banner bendi-banner">
+                    <span class="banner-btn bendi-banner-left"></span>
+                    <span class="banner-btn bendi-banner-right"></span>
+                    <div class="city-change">
+                        <p>切换城市</p>
+                    </div>
+                    <div class="viwepager-wrap bendi-viwepager">
+                        <ul class="bendi-banner-ul banner-ul">
+                            <li class="bendi-list banner-list">
+                                <a href="http://m.baidu.com/news?fr=mohome&ssid=1dd16b6b3030323134b92c&from=844b&uid=&pu=sz%401320_2001%2Cta%40iphone_1_8.0_3_600&bd_page_type=1#page/2/http%3A%2F%2Fwar.163.com%2F15%2F1211%2F09%2FBAI0EKQB00014U9B.html/%E6%9C%B1%E5%BE%B7%E8%A2%AB%E8%B5%B6%E5%87%BA%E4%B8%AD%E5%8D%97%E6%B5%B7%EF%BC%9A%E9%99%9024%E5%B0%8F%E6%97%B6%E4%B9%8B%E5%86%85%E7%A6%BB%E5%BC%80%E5%8C%97%E4%BA%AC/%E7%BD%91%E6%98%93%E5%86%9B%E4%BA%8B/1449801077000/7976388542802917721">
+                                    <img src="./img/timg4.jpg">
+                                    <h4 class="img-title">
+                                <span>朱德被赶出中南海：限24小时之内离开北京</span>	
+                                </h4>
+                                </a>
+                            </li>
+                            <li class="bendi-list banner-list">
+                                <a href="http://m.baidu.com/news?fr=mohome&ssid=1dd16b6b3030323134b92c&from=844b&uid=&pu=sz%401320_2001%2Cta%40iphone_1_8.0_3_600&bd_page_type=1#page/2/http%3A%2F%2Ffinance.sina.com.cn%2Fchina%2F20151211%2F100023992412.shtml/%E4%B8%AD%E5%A4%AE%E7%BB%8F%E6%B5%8E%E5%B7%A5%E4%BD%9C%E4%BC%9A%E8%AE%AE%E6%88%96%E6%AD%A3%E5%9C%A8%E5%8F%AC%E5%BC%80%20%E5%8C%97%E4%BA%AC%E5%9C%B0%E9%93%81%E9%80%8F%E7%8E%84%E6%9C%BA/%E6%96%B0%E6%B5%AA%E8%B4%A2%E7%BB%8F/1449800730000/7567262309111351118">
+                                    <img src="./img/timg5.jpg">
+                                    <h4 class="img-title">
+                                <span>中央经济工作会议或正在召开 北京地铁透玄机</span>	
+                                </h4>
+                                </a>
+                            </li>
+                            <li class="bendi-list banner-list">
+                                <a href="http://m.baidu.com/news?fr=mohome&ssid=1dd16b6b3030323134b92c&from=844b&uid=&pu=sz%401320_2001%2Cta%40iphone_1_8.0_3_600&bd_page_type=1#page/2/http%3A%2F%2Ffinance.huanqiu.com%2Fzcjd%2F2015-12%2F8156624.html/%E3%80%90%E5%9B%BE%E8%A7%A3%E3%80%91%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%9C%8B%E4%BD%A0%E6%9C%89%E6%B2%A1%E6%9C%89%E8%B5%84%E6%A0%BC%E8%90%BD%E6%88%B7%E5%8C%97%E4%BA%AC/%E7%8E%AF%E7%90%83%E7%BD%91/1449801078000/9872476036648374313">
+                                    <img src="./img/timg6.jpg">
+                                    <h4 class="img-title">
+                                <span>【图解】一张图看你有没有资格落户北京</span>	
+                                </h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bendi-pagination banner-pagin">
+                        <span class="bendi-pagination-switch actived-switch"></span>
+                        <span class="bendi-pagination-switch"></span>
+                        <span class="bendi-pagination-switch"></span>
+                    </div>
+                </div>
+                <div class="news-card-con">
+                    <ul class="bendi-ul">
+                      
+                    </ul>
+                </div>
+                <p class="no-more no-bendi">已经没有更多内容了</p>
+                <div class="get-more">
+                    <div class="get-more-btn more-bendi">点击加载更多</div>
+                </div>
+            </aside>
+        </article>
+        <!-- end article -->
+        <!-- footer start -->
+        <footer>
+            <div class="bottom-nav nav-wrap">
+                <ul>
+                    <li>
+                        <a href="">
+                            <p class="nav-text feed-back">意见反馈</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p class="nav-text app-recommended">应用推荐</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p class="nav-text app-download">客户端</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- end footer -->
+    </div>
+    <!-- end con -->
+</body>
+<script type="text/javascript" src="./script/jquery.min.js"></script>
+<script type="text/javascript" src="./script/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="./script/jquery.touchSlider.js"></script>
+<script type="text/javascript" src="./script/app.js"></script>
+
+</html>

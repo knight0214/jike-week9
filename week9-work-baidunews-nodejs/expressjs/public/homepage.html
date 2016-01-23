@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>百度新闻后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheet/homepage.css">
+</head>
+
+<body>
+    <div class="container-fluit con">
+        <div class="pro-con">
+            <div class="pro-box">
+                <p>是否要删除选中的项目？</p>
+                <button class="btn btn-danger btn-sm" id="godel-btn">确定</button>
+                <button class="btn btn-info btn-sm" id="goback-btn">返回</button>
+            </div>
+        </div>
+        <header class="row header-wrap">
+            <!--top nav start-->
+            <nav class="navbar navbar-inverse nav-wrap col-xs-12">
+                <p class="navbar-header nav-title col-xs-12 col-sm-10 col-md-5 col-lg-3 ">百度新闻后台管理系统</p>
+                <form class="navbar-form form-horizontal form-search hidden-xs col-sm-7 col-md-7 col-lg-7 ">
+                    <div class="form-gruop">
+                        <label class="form-label" for="search-text"></label>
+                        <!-- <input class="form-control " type="text" id="search-text" placeholder="内容查找">
+                        <button class="form-control btn btn-success"><span class="glyphicon glyphicon-search"></span></button> -->
+                    </div>
+                </form>
+                <p class="navbar-text  nav-content col-xs-12 col-sm-4 col-md-2 col-lg-4 ">欢迎管理员:<a href="#" class="navbar-link">admin</a>登录本系统</p>
+                <form action="./control.html" class="navbar-form col-xs-12 col-sm-1 col-md-1 col-lg-1 ">
+                    <button class="btn btn-info">退出登录</button>
+                </form>
+            </nav>
+            <!--end top nav-->
+        </header>
+        <article class="row content">
+            <div class="container-fluit">
+                <!--nav for samllscreen-->
+                <aside class="menu-small col-xs-12  hidden-md hidden-lg ">
+                    <form class="form-group">
+                        <select class="form-control menu-small-select">
+                            <option>产品发布管理</option>
+                            <option selected>新闻数据管理</option>
+                            <option>网站图片管理</option>
+                            <option>企业邮件管理</option>
+                            <option>管理员权限设置</option>
+                            <option>用户名密码设置</option>
+                            <option>数据备份与还原</option>
+                        </select>
+                    </form>
+                </aside>
+                <!--left nav start-->
+                <aside class="menu col-md-2  hidden-sm hidden-xs">
+                    <nav>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">网站结构管理</a></li>
+                            <li><a href="#">产品发布管理</a></li>
+                            <li class="active"><a href="#">新闻数据管理</a></li>
+                            <li><a href="#">网站图片管理</a></li>
+                            <li><a href="#">企业邮件管理</a></li>
+                            <li><a href="#">管理员权限设置</a></li>
+                            <li><a href="#">用户名密码设置</a></li>
+                            <li><a href="#">数据备份与还原</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <!--end left nav-->
+                <!--right content start-->
+                <aside class="col-md-10 col-sm-12 col-xs-12">
+                    <div class="wrap-title">
+                        <em>新闻数据管理</em>
+                        <a href="./add.html" class="btn btn-success btn-xs add-btn control-btn">新增</a>
+                        <button class="btn btn-info btn-xs edit-btn control-btn">编辑</button>
+                        <button class="btn btn-danger btn-xs del-btn control-btn">删除</button>
+                    </div>
+                </aside>
+                <aside class="col-md-10 col-sm-12">
+                    <div class="edit-con">
+                        <form id="editform">
+                            <table class="table table-striped table-condensed add-table">
+                                <thead>
+                                    <tr>
+                                        <th>项目</th>
+                                        <th>数据</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="add-news-body">
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for='newsid'>编号</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <input type="text" name="newsid" id='newsid' disabled="true" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="newsclass">新闻归属</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <select name="newsclass" id="newsclass" required="requited">
+                                                <option value selected>请选择新闻的归属</option>
+                                                <option value='rec'>百度推荐</option>
+                                                <option value='baijia'>百度百家</option>
+                                                <option value='bendi'>百度本地</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="newshref">新闻链接</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <textarea name="newshref" id="newshref" placeholder="请输入新闻的跳转链接" required="requited"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="newstitle">新闻标题</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <input type="text" name="newstitle" id="newstitle" placeholder="请输入新闻标题" required="requited" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="newstext">新闻内容摘要</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <textarea name="newstext" id="newstext" placeholder="请输入新闻内容摘要"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="newsimg1">新闻图片链接1</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <textarea name="newsimg1" id="newsimg1" placeholder="请输入新闻图片链接"></textarea>
+                                            <p>该图片用于新闻的第一张图</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="newsimg2">新闻图片链接2</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <textarea name="newsimg2" id="newsimg2" placeholder="请输入新闻图片链接"></textarea>
+                                            <p>该图片用于新闻的第二张图，仅图片排版模式可见</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="newsimg3">新闻图片链接3</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <textarea name="newsimg3" id="newsimg3" placeholder="请输入新闻图片链接"></textarea>
+                                            <p>该图片用于新闻的第三张图，仅图片排版模式可见</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="newstype">新闻排版模式</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <select name="newstype" id="newstype" required="requited">
+                                                <option value selected>请选择新闻排版模式</option>
+                                                <option value='img-text-show'>图文排版模式</option>
+                                                <option value='img-show'>仅图片模式</option>
+                                                <option value='text-show'>仅文字模式</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="addtime">修改时间</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <input type="datetime-local" name="addtime" id="addtime" />
+                                            <p id="retime"></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="newstag">新闻标签</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <input type="text" name="newstag" id="newstag" placeholder="请输入新闻标签" />
+                                            <p>请输入新闻标签如：腾讯头条，百度要闻……</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-title">
+                                            <label for="tagcolor">标签颜色</label>
+                                        </td>
+                                        <td class="td-content">
+                                            <select name="tagcolor" id="tagcolor">
+                                                <option value selected>请选择新闻标签的颜色</option>
+                                                <option value='red'>红色</option>
+                                                <option value='blue'>蓝色</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <!--   <a href="./homepage.html" class="btn btn-success btn-sm submit-btn">提交</a> -->
+                                           <!--  <input class="btn btn-success btn-sm update-btn" value="修改" /> -->
+                                            <button class="btn btn-success btn-sm update-btn">修改</button>  
+                                            <input class="btn btn-warning btn-sm reset-btn" type="reset" value="重置" />
+                                            <a href="./homepage.html" class="btn btn-info btn-sm back-btn">返回</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </aside>
+                      
+                <aside class="col-md-10 col-sm-12 table-wrap">
+              
+                    <form id="newsform">
+                        <table class="table table-striped table-condensed news-table">
+                            <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>新闻归属</th>
+                                     <th>新闻链接</th>
+                                    <th>新闻标题</th>
+                                    <th>新闻摘要</th>
+                                    <!-- <th>图片地址1</th>
+                                        <th>图片地址2</th>
+                                        <th>图片地址3</th> -->
+                                    <th>排版类型</th>
+                                    <th>加入时间</th>
+                                    <th>新闻标签</th>
+                                    <th>标签颜色</th>
+                                  <!--   <th>操作</th> -->
+                                </tr>
+                            </thead>
+                            <tbody class="news-body">
+                               
+                            </tbody>
+                        </table>
+                    </form>
+                    <!-- <nav class="pagin-wrap">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav> -->
+            </div>
+            </aside>
+            <!--end right cotent-->
+            <!-- </div> -->
+            <!--container in article-->
+    </div>
+    </article>
+    </div>
+    <!--container-->
+    <script type="text/javascript" src="./script/jquery.min.js"></script>
+    <script type="text/javascript" src="./script/newsapp.js"></script>
+</body>
+
+</html>
